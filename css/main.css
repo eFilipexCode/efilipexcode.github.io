@@ -74,16 +74,6 @@ header span {
   top: 26px;
 }
 
-.menu {
-  width: 50%;
-  height: 100vh;
-  position: absolute;
-  background-color: cadetblue;
-  right: -50%;
-  display: none;
-  z-index: 1000;
-}
-
 main {
   text-align: center;
   padding-top: 2rem;
