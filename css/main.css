@@ -1,0 +1,110 @@
+header {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+}
+
+header span {
+  font-weight: 900;
+  font-size: 1.4rem;
+  user-select: none;
+}
+
+.hamburguer {
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburguer input {
+  display: none;
+  visibility: hidden;
+  outline: none;
+}
+
+.hamburguer label {
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.hamburguer .trace {
+  width: calc(100% - 1.4rem);
+  height: 0.4rem;
+  background-color: #000;
+  transition: 0.3s ease-in-out;
+  margin: 0rem auto;
+  position: absolute;
+}
+
+.hamburguer .trace:nth-child(1) {
+  top: 20px;
+}
+
+.hamburguer .trace:nth-child(2) {
+  top: 30px;
+}
+
+.hamburguer .trace:nth-child(3) {
+  top: 40px;
+}
+
+#hamburguer:checked + label .trace:nth-child(1) {
+  transform: rotate(45deg);
+  top: 26px;
+}
+
+#hamburguer:checked + label .trace:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburguer:checked + label .trace:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 26px;
+}
+
+.menu {
+  width: 50%;
+  height: 100vh;
+  position: absolute;
+  background-color: cadetblue;
+  right: -50%;
+  display: none;
+  z-index: 1000;
+}
+
+main {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+main h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+main p {
+  color: #888;
+}
+
+main button {
+  margin-top: 1.6rem;
+  outline: none;
+  cursor: pointer;
+  padding: 0.8rem;
+  border: none;
+  width: 10rem;
+  background-color: #67dd0a;
+  color: #000;
+}
