@@ -82,6 +82,17 @@ main {
 main h1 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
+  cursor: default;
+  user-select: none;
+}
+
+main h1 span {
+  transform: rotate(0deg);
+  display: inline-block;
+}
+
+main h1 span:hover {
+  animation: wave 1s ease-in-out 0s infinite alternate forwards;
 }
 
 main p {
@@ -95,6 +106,23 @@ main button {
   padding: 0.8rem;
   border: none;
   width: 10rem;
-  background-color: #67dd0a;
+  background: linear-gradient(-90deg, #7bed9f, #2ed573);
   color: #000;
+  transition: 0.3s ease;
+  box-shadow: 0;
+}
+
+main button:hover {
+  transform: scale(1.1);
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(25deg);
+  }
 }
