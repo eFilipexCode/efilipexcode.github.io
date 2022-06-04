@@ -76,7 +76,7 @@ header span {
 
 main {
   text-align: center;
-  padding-top: 2rem;
+  padding: 2rem 0.5rem;
 }
 
 main h1 {
